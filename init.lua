@@ -250,6 +250,12 @@ require('lazy').setup({
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
     },
+    opts = {
+      ensure_installed = {
+        "hcl",
+        "terraform",
+      },
+    },
     build = ':TSUpdate',
   },
 
@@ -271,6 +277,9 @@ require('lazy').setup({
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
+
+-- Disable wrapping
+vim.wo.wrap = false
 
 -- Set highlight on search
 vim.o.hlsearch = false
